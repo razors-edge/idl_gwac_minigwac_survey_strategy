@@ -1,0 +1,19 @@
+idl << EOF
+.compile /home/han/IDLWorkspace71/programs/plot_figures/loadct_plot.pro
+.run /home/han/IDLWorkspace71/programs/plot_figures/loadct_plot.pro
+.compile /home/han/IDLWorkspace71/Astro_library/pro/astro/ten.pro
+.run /home/han/IDLWorkspace71/Astro_library/pro/astro/ten.pro
+.compile /home/han/IDLWorkspace71/Astro_library/pro/astro/ct2lst.pro
+.run /home/han/IDLWorkspace71/Astro_library/pro/astro/ct2lst.pro
+.compile /home/han/IDLWorkspace71/Astro_library/pro/astro/sixty.pro
+.run /home/han/IDLWorkspace71/Astro_library/pro/astro/sixty.pro
+.compile /home/han/IDLWorkspace71/Astro_library/pro/jhuapl/repchr.pro
+.run /home/han/IDLWorkspace71/Astro_library/pro/jhuapl/repchr.pro
+.compile /home/han/IDLWorkspace71/Astro_library/pro/misc/gettok.pro
+.run /home/han/IDLWorkspace71/Astro_library/pro/misc/gettok.pro
+.compile /home/han/IDLWorkspace71/GWAC_work/survey_strategy/minigwac_observing_area_mount_dispatch.pro
+.run /home/han/IDLWorkspace71/GWAC_work/survey_strategy/minigwac_observing_area_mount_dispatch.pro
+
+.compile minigwac_observing_area_total_night_web.pro
+.run minigwac_observing_area_total_night_web.pro
+MINIGWAC_OBSERVING_AREA_TOTAL_NIGHT_WEB

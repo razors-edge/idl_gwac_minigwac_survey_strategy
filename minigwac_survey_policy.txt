@@ -1,0 +1,56 @@
+night time: the sun is located 10 degrees below horizon 
+observable area: altitude is higher than 30 degrees;
+				avoid the area of low galactic latitude (20 degrees);
+				Moonphase and moondistance
+				
+				
+
+fix mosaic of all sky 
+
+priority: long time range, large nearby galaxies quantity, eastward
+
+to do: observation time in a year for each frame.
+
+pro list:
+sky_area_mosaic_minigwac.pro   The program devides all sky into the fix mosaic according to the FOV 
+of mini-GWAC
+hour_angle_elevation_minigwac_xinglong.pro: 
+				This pro calculates the observable areas for GWAC during the night. 
+				The night time of one specific day is defined as the time when the sun is located 
+				lower than 10 degrees below horizon. Each time point of 30 minutes in the whole day is calculated 
+				for the sun position. The solar zenith angle is calculated by the "zenith" fanction;
+				The local sidereal time for each time point is calculated by the "local_sidereal_time" 
+				program. The night time (observing time) is also defined here.
+				
+				Calculate the angular distance between the local sidereal time of each time point and 
+				the center of each grid. The grids with angular distance less than 62 degrees and the galaxtic latitude higher
+				than 20 degrees are observable at the specific time point.
+				
+				Calculate earlist observing time point for each specific grid.
+				
+				Calculate the earlist time point and the lastest time point for each specific grid when this grid is observable (Calculate the 
+				observing time range for each specific grid).
+				
+				Calculate the Moon phase, Moon position and angular distance between the Moon and each grid. 
+				
+				Write the coordinates of observable grids, the begin and end local sidereal time, the begin and end Beijing time, the Moon positions 
+				at begin and end time points and the Moon phase into a output text file.
+
+minigwac_observing_area_time.pro:
+				plot the observable grids and the begin and end Beijing time into a figure. The areas are seperated according to their dec (-20, 20, 60),
+				so the telescopes can select specific dec to observe. 
+				
+minigwac_observing_area_list.pro:
+				Calculate the observation list and plot
+
+minigwac_observing_area_dark.pro:
+				make a observation list for dark mode.
+								
+minigwac_observing_area_total_night.pro:
+				make a total list of the night including the calibration observations and parking
+							
+minigwac_star_number_sum.pro:
+				statistic of star number of MiniGWAC FOV
+
+survey_widget_tool_test.pro: GUI tool for user (test version)
+
